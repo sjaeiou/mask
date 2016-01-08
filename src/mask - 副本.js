@@ -1,11 +1,12 @@
+"use strict";
 ;function mask(target,config) {
 	if (!target) return;
 	// 默认配置
 	var initConfig = {
 		fillStyle: "color", //填充的方式 支持两种 color & image
 		fillContent: "#cccccc", //填充的内容 根据fillStyle 如果fillStyle=color则填颜色 fillStyle=image则填图片地址或base64
-		percent: 100, //
-		radius: 15, //涂抹笔触的半径 默认15
+		percent: "100", //
+		radius: "15", //涂抹笔触的半径 默认15
 		disable: false, //是否封锁 默认不封锁
 		touchstart: function() {}, //手指按下的时候执行
 		touchmove: function() {}, //手指移动的时候执行
@@ -24,6 +25,8 @@
 
 mask.prototype = {
 	changeConfig : function (config) {
+		v = 1;
+		console.log(v);
 		var _this = this;
 		for (var x in config) {
 			_this.config[x] = config[x];
@@ -70,6 +73,7 @@ mask.prototype = {
 		target.width = w;
 		target.height = h;
 		target.style.backgroundColor = "#ffffff";
+
 		ctx.globalCompositeOperation = "source-over";
 		if (config.fillStyle == "color") {
 			ctx.fillStyle = config.fillContent;

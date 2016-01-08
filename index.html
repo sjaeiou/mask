@@ -39,7 +39,11 @@ function $$(id) {
 	return (typeof id == "object") ? id : document.getElementById(id);
 }
 
-var maskA = new mask($$("JcanvasA"));
+var maskA = new mask($$("JcanvasA"),{
+	complete: function() {
+		console.log("初始化开始");
+	},
+});
 
 $$("JbtnA").addEventListener("click",function(){
 	maskA.disable();
