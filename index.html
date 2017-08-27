@@ -30,45 +30,45 @@
 <script src="./src/mask.js" charset="utf-8"></script>
 <script type="text/javascript">
 function $$(id) {
-    return (typeof id == "object") ? id : document.getElementById(id)
+    return (typeof id == 'object') ? id : document.getElementById(id)
 }
 
-var maskA = new Mask($$("JcanvasA"), {
+var maskA = new Mask($$('JcanvasA'), {
     complete: function() {
-        console.log("初始化开始")
+        console.log('初始化开始')
     },
 })
 
-$$("JbtnA").addEventListener("click", function() {
+$$('JbtnA').addEventListener('click', function() {
     maskA.disable()
 }, false)
 
-$$("JbtnB").addEventListener("click", function() {
+$$('JbtnB').addEventListener('click', function() {
     maskA.enable()
 }, false)
 
-$$("JbtnC").addEventListener("click", function() {
+$$('JbtnC').addEventListener('click', function() {
     maskA.changeConfig({
         radius: 50
     })
 }, false)
 
-$$("JbtnD").addEventListener("click", function() {
+$$('JbtnD').addEventListener('click', function() {
     maskA.clear()
 }, false)
 
-$$("JbtnE").addEventListener("click", function() {
+$$('JbtnE').addEventListener('click', function() {
     maskA.changeConfig({
-        fillStyle: "color",
-        fillContent: "#f60"
+        fillStyle: 'color',
+        fillContent: '#f60'
     })
     maskA.init()
 }, false)
 
-$$("JbtnZ").addEventListener("click", function() {
+$$('JbtnZ').addEventListener('click', function() {
     maskA.changeConfig({
-        fillStyle: "image",
-        fillContent: "./img/mask.jpg"
+        fillStyle: 'image',
+        fillContent: './img/mask.jpg'
     })
     maskA.init()
 }, false)
