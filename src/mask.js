@@ -9,7 +9,7 @@
 })('Mask', function() {
     var Mask = function(target, config) {
         if (!target) return
-            // 默认配置
+        // 默认配置
         var initConfig = {
             fillStyle: "color", // 填充的方式 支持两种 color & image
             fillContent: "#cccccc", // 填充的内容 根据fillStyle 如果fillStyle=color则填颜色 fillStyle=image则填图片地址或base64
